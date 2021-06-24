@@ -36,8 +36,14 @@ class LogInVC2: UIViewController {
     @IBAction func forgotPasswordPressed() {
         showAlert(with: "Wrong format", and: "Password is \(user.password)")
     }
-}
+    
+    @IBAction func unwindToname(_ unwindSegue: UIStoryboardSegue) {
+        logInTF.text = nil
+        passwordTF.text = nil
 
+    
+}
+}
 // MARK: - UIAlertController
 extension LogInVC2 {
     private func showAlert(with title: String, and message: String) {
@@ -49,3 +55,19 @@ extension LogInVC2 {
     }
 }
 
+extension LogInVC2: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == logInTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        }
+        return true
+    }
+}

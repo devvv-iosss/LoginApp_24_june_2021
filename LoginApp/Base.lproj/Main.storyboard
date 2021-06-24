@@ -121,7 +121,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LogOutPressed" destination="aXI-zN-tSn" eventType="touchUpInside" id="Dx9-MF-K1R"/>
-                                    <segue destination="o8o-V1-4yz" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Ksw-nX-2kf"/>
+                                    <segue destination="o8o-V1-4yz" kind="unwind" unwindAction="unwindToname:" id="Azc-4h-vkd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,6 +160,7 @@
                                 <state key="normal" title="LogOut"/>
                                 <connections>
                                     <action selector="LoOutPressed" destination="4fe-ii-B5R" eventType="touchUpInside" id="JRL-lo-uFK"/>
+                                    <segue destination="U8D-I7-4uQ" kind="unwind" unwindAction="unwindToname:" id="kfO-W8-zIN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, user, lets LoOut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ml-mX-ZRF">
@@ -186,6 +187,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQw-Jd-Oxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="U8D-I7-4uQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2353" y="130"/>
         </scene>
